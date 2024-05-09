@@ -1,0 +1,144 @@
+{
+    "layer": "top",
+    "position": "right",
+    "reload_style_on_change": true,
+    "spacing": 0,
+    "modules-left": [
+      "custom/clock-icon", 
+      "clock", 
+      "pulseaudio#icon", "pulseaudio#text"
+    ],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [
+      "battery#icon", "battery#text", 
+      "custom/memory-icon", "memory", 
+      "custom/cpu-icon", "cpu", 
+      "temperature"
+    ],
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": false,
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+      }, 
+      "on-click": "activate",
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+
+    "battery#icon": {
+      "format": "{icon}",
+      "format-icons": [" ", " ", " ", " ", " "],
+      "interval": 1,
+      "states": {
+        "warning": 25,
+        "critical": 10
+      },
+      "tooltip": true
+    },
+
+    "battery#text": {
+      "format": "{capacity}",
+      "interval": 60,
+      "states": {
+        "warning": 25,
+        "critical": 10
+      },
+      "tooltip": true
+    },
+
+    "custom/clock-icon": {
+      "format": "",
+      "tooltip": false,
+      "justify": "center"
+    },
+
+    "clock": {
+      "format": "{:%H\n%M}",
+      "justify": "center",
+      "format-alt": "{:%a\n%d\n%b\n%Y}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+
+      "calendar": {
+        "mode": "year",
+        "mode-mon-col": 3,
+        "weeks-pos": "right",
+        "on-scroll": 1,
+        "on-click-right": "mode",
+        "format": {
+          "months": "<span color='#ffead3'><b>{}</b></span>",
+          "days": "<span color='#ecc6d9'><b>{}</b></span>",
+          "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+          "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+          "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+        }
+      },
+      
+      "actions":  {
+        "on-click-right": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    },
+
+    "temperature": {
+      "thermal-zone": 0, 
+      "interval": 5,
+      "format": "{temperatureC}",
+      "tooltip": false,
+      "critical-threshold": 80
+    },
+
+    "custom/cpu-icon": {
+      "format": "󰘷",
+      "tooltip": false
+    },
+
+    "cpu": {
+      "interval": 1,
+      "format": "{usage}"
+    },
+
+    "pulseaudio#icon": {
+      //"format": "{volume}",
+      "format": "{icon}",
+      "format-muted": "󰖁",
+      "format-icons": {
+        "default": ["󰕿", "󰖀", "󰕾"]
+      },
+      "tooltip": true,
+      "scroll-step": 1,
+      "on-click": "pavucontrol"
+    },
+
+    "pulseaudio#text": {
+      "format": "{volume}",
+      "format-muted": "x",
+      "tooltip": true,
+      "scroll-step": 1,
+      "on-click": "pavucontrol"
+    },
+
+    "custom/memory-icon": {
+      "format": " ",
+      "rotate": 90,
+      "tooltip": false
+    },
+
+    "memory": {
+      "interval": 30,
+      "format": "{percentage}"
+    }
+}
