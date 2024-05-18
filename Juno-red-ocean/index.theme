@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Juno-red-ocean
+Comment=GTK themes inspired by epic vscode themes | edit by Fedor_Hill
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Juno-red-ocean
+MetacityTheme=Juno-red-ocean
+IconTheme=Zafiro-icons
+ButtonLayout=:minimize,maximize,close
