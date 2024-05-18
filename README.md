@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-In soon i will add custom gtk theme based on Juno-Ocean
-=======
-hello (:
->>>>>>> e52d8f9 (add README)
+The theme for GNU/Linux system for Hyprland. 
+
+FH: I take a nice red colors for the first time. Usually have dark blue or violete. 
+
+Knowed bug list:
+  
+  1) Is color area of mouse selection. (I don`t found in code where change to red, so is dark ocean green)
