@@ -9,6 +9,6 @@ How install theme ?
  - (hypr) rename old directory hyrpland in .config to oldHypr (if you had) and move my hypr to .config.
  - (background) create directory "wallpapers" in Pictures and move only file or save a file in custom way (don`t forget change hyprpaper.conf).
 
-Knowed bug list:
+Knowed issue list:
   
   1) Is color area of mouse selection. (I don`t found in code where change to red, so is dark ocean green)
